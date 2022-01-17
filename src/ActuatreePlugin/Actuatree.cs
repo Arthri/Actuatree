@@ -10,7 +10,7 @@ using TerrariaApi.Server;
 namespace ActuatreePlugin
 {
     [ApiVersion(2, 1)]
-    public class Actuatree : TerrariaPlugin
+    public partial class Actuatree : TerrariaPlugin
     {
         /// <inheritdoc />
         public override string Name => typeof(Actuatree).Assembly.GetCustomAttribute<AssemblyTitleAttribute>().Title;
@@ -78,6 +78,8 @@ namespace ActuatreePlugin
 
         public override void Initialize()
         {
+            Initialize_Credits();
+
             IL.Terraria.WorldGen.CheckTree += WorldGen_CheckTree;
         }
 
