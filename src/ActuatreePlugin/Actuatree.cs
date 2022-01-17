@@ -34,6 +34,7 @@ namespace ActuatreePlugin
         {
             if (disposing)
             {
+                Dispose_Hooks();
             }
             base.Dispose(disposing);
         }

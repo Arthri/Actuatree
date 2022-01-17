@@ -1,7 +1,9 @@
 ﻿using Mono.Cecil.Cil;
 using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
 using OTAPI.Tile;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 
@@ -9,9 +11,21 @@ namespace ActuatreePlugin
 {
     partial class Actuatree
     {
+        private readonly List<IDetour> _detours = new();
+
         private void Initialize_Hooks()
         {
-            IL.Terraria.WorldGen.CheckTree += WorldGen_CheckTree;
+            var checkTreeMethod = ((Action<int, int>)WorldGen.CheckTree).Method;
+            _detours.Add(new ILHook(checkTreeMethod, WorldGen_CheckTree));
+        }
+
+        private void Dispose_Hooks()
+        {
+            for (int i = 0; i < _detours.Count; i++)
+            {
+                var detour = _detours[i];
+                detour.Dispose();
+            }
         }
 
         private void WorldGen_CheckTree(ILContext il)
