@@ -1,0 +1,12 @@
+framework: net472
+source https://api.nuget.org/v3/index.json
+
+nuget Mono.Cecil 0.11.4
+nuget MonoMod.RuntimeDetour 20.12.25.1
+nuget MonoMod.Utils 20.12.25.1
+
+
+
+group HTTPDependencies
+
+  http https://github.com/Pryaxis/TShock/releases/download/v4.4.0-pre11/TShock4.4.0_Pre11_Terraria1.4.0.5.zip TShock/TShock.zip

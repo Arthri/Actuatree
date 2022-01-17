@@ -1,0 +1,15 @@
+RESTRICTION: == net472
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Mono.Cecil (0.11.4)
+    MonoMod.RuntimeDetour (20.12.25.1)
+      Mono.Cecil (>= 0.11.3)
+      MonoMod.Utils (>= 20.12.25.1)
+    MonoMod.Utils (20.12.25.1)
+      Mono.Cecil (>= 0.11.3)
+
+GROUP HTTPDependencies
+
+HTTP
+  remote: https://github.com
+    TShock/TShock.zip (/Pryaxis/TShock/releases/download/v4.4.0-pre11/TShock4.4.0_Pre11_Terraria1.4.0.5.zip)
