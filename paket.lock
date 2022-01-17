@@ -12,4 +12,4 @@ GROUP HTTPDependencies
 
 HTTP
   remote: https://github.com
-    TShock/TShock.zip (/Pryaxis/TShock/releases/download/v4.4.0-pre11/TShock4.4.0_Pre11_Terraria1.4.0.5.zip)
+    TShock/TShock.zip (/Pryaxis/TShock/releases/download/v4.5.12/TShock4.5.12_Terraria1.4.3.2.zip)
