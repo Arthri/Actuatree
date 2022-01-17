@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Actuatree.Credits.cs" />
     <Compile Include="Actuatree.cs" />
+    <Compile Include="Actuatree.Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
