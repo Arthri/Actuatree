@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ActuatreePlugin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("TShock plugin that allows actuation of the tree root block")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Arthri")]
 [assembly: AssemblyProduct("Actuatree")]
